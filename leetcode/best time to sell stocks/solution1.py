@@ -21,7 +21,7 @@ class Solution:
                 r += 1
         return res
             
-    
+
     
 input_data = [7,1,5,3,6,4]      
 test = Solution()
