@@ -3,10 +3,8 @@ class Solution:
         length = len(s1)
         left = 0
         s1 = "".join(sorted(s1))
-        print(s1)
         for right in range(left+length-1, len(s2)):
             current = "".join(sorted(s2[left:right+1]))
-            print(current)
             if (current == s1):
                 return True
             left += 1
