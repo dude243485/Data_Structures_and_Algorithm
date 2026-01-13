@@ -12,7 +12,6 @@ class Solution:
             
         return memo[n]
             
-    
 
 test = Solution()
 print(test.fib(0))
