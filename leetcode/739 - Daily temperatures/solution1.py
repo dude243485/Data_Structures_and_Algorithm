@@ -4,20 +4,26 @@ class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         
         stack = []
-        ansStack = []
+        posStack = []
         n = len(temperatures)
-        cMax = temperatures[0]
-        for i in range(n):           
-            pos = i
-            while  pos < n - 1 and temperatures[i] > temperatures[pos + 1] :
-                pos += 1
-            ansStack.append(max(0, pos - i + 1))
+        ans = [0] * n
         
-        return ansStack
+        for i in range(n):
+            next = temperatures[i]
             
-    
-
-
+            while stack and  next > stack[-1]:
+                pos = posStack[-1]
+                wait = i - pos
+                ans[pos] = wait
+                stack.pop()
+                posStack.pop()
+                
+            stack.append(next)
+            posStack.append(i)
+        
+        return ans
+        
+        
 tokens = [73,74,75,71,69,72,76,73]
 test = Solution()
 print(test.dailyTemperatures(tokens))
