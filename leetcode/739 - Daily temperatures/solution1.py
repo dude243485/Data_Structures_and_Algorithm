@@ -27,4 +27,3 @@ class Solution:
 tokens = [73,74,75,71,69,72,76,73]
 test = Solution()
 print(test.dailyTemperatures(tokens))
-print([1,1,4,2,1,1,0,0])
