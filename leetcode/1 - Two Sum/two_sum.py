@@ -1,6 +1,5 @@
 from typing import List
-nums = [3,2,4]
-target = 6
+
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
@@ -9,7 +8,8 @@ class Solution:
                 if ((nums[i] + nums[j])== target):
                     return [i, j]        
                            
-
+nums = [3,2,4]
+target = 6
 test = Solution()
 answer = test.twoSum(nums, target)
 print(answer)
