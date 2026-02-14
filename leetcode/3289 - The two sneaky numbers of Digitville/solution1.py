@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def getSneakyNumbers(self, nums: List[int]) -> List[int]:
         hashSet = set()
