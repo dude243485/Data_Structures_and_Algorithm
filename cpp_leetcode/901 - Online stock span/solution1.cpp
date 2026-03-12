@@ -1,5 +1,6 @@
 #include <stack>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -33,6 +34,15 @@ public:
         return span;
     }
 };
+
+int main () {
+    int *ptr = {};
+    int num = 6;
+    ptr = &num;
+    cout << "memory address pointer: " << ptr << endl;
+
+    return 0;
+}
 
 /**
  * Your StockSpanner object will be instantiated and called as such:
